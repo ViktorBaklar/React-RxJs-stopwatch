@@ -75,7 +75,7 @@ const Timer = () => {
         <div className={styles.container}>
             <div className={styles.timerDisplay}>{String(timeData.hours).padStart(2, "0")} : {String(timeData.minutes).padStart(2, "0")} : {String(timeData.seconds).padStart(2, "0")}</div>
             <div className={styles.btnWrapper}>
-                <button className={styles.startBtn} onClick={status==='start' ? handleStop : handleStart}>start/stop</button>
+                <button className={styles.startBtn} onClick={status==='start' ? handleStop : handleStart}>{status==='start' ? `stop` : `start`}</button>
                 <button className={styles.resetBtn} onClick={handleReset}>reset</button>
                 <button className={styles.waitBtn} onClick={handleWait}>wait</button>
             </div>
