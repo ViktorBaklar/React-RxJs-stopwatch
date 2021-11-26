@@ -1,0 +1,30 @@
+.container {
+    width: 600px;
+    margin: 20px auto;
+    background-color: #a87536;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.btnWrapper {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.timerDisplay {
+    /* width: 200px; */
+    /* height: 100px; */
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    display: block;
+    font-size: 40px;
+}
+
+.startBtn, .resetBtn, .waitBtn {
+    width: 80px;
+}
