@@ -36,12 +36,12 @@ const Timer = () => {
     useEffect(() => {
         if (status === 'start') {
             const timer$ = new Observable((observer) => {
-                const startTimer = setInterval(() => {
+                const timerInterval = setInterval(() => {
                     observer.next();
                 }, 1000);
 
                 return () => {
-                    clearInterval(startTimer);
+                    clearInterval(timerInterval);
                 };
             });
             const observer = {
@@ -67,7 +67,7 @@ const Timer = () => {
 
     const timeData = {
         seconds: (time%60),
-        minutes: Math.floor(time/60),
+        minutes: Math.floor(time/60)%60,
         hours: Math.floor(time/3600),
     }
 
